@@ -5,7 +5,7 @@ import Cityscape from './Cityscape'
 import '../../../../index.css'
 import infinity from '../../../../assets/about/infinity-icon.svg'
 import bulb from '../../../../assets/about/bulb-icon.svg'
-import TapeTransition from '../../../../../components/TapeTransition'
+// import TapeTransition from '../../../../../components/TapeTransition'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import ImageTrail from './ImageTrail'
@@ -90,7 +90,6 @@ const About: React.FC = () => {
       subtitle: 'Our Visionaries',
       count: 2,
       layout: 'row' as const,
-      // Enhanced Diamond: High contrast with icy blues and pure whites
       gradient: 'from-[#70D2FF] via-white to-[#C2E9FB]'
     },
     {
@@ -98,7 +97,6 @@ const About: React.FC = () => {
       subtitle: 'Our Champions',
       count: 4,
       layout: 'row' as const,
-      // Enhanced Platinum: Deep metallic chrome feel
       gradient: 'from-[#757F9A] via-[#D7DDE8] to-[#757F9A]'
     },
     {
@@ -111,7 +109,7 @@ const About: React.FC = () => {
     {
       title: 'Community Partners',
       subtitle: 'Our Community',
-      count: 8,
+      count: 6,
       layout: 'grid' as const,
       gradient: 'from-white via-white/70 to-white/40'
     },
@@ -125,7 +123,6 @@ const About: React.FC = () => {
         </div>
         <Cityscape />
 
-        {/* PINNED STACK CONTAINER */}
         <div
           ref={containerRef}
           className="relative h-screen w-full bg-[#131313]"
@@ -136,7 +133,8 @@ const About: React.FC = () => {
               ref={sectionRefs[i]}
               className="content-container absolute inset-0 flex flex-col justify-between items-center h-screen"
             >
-              <div className="h-[70%] w-[60%] flex flex-col justify-between items-center mt-[15vh]">
+              {/* Responsive width for mobile vs desktop */}
+              <div className="h-[70%] w-[90%] md:w-[60%] flex flex-col justify-between items-center mt-[15vh]">
                 <div className="text-section w-full flex flex-col items-center justify-between gap-6 py-4">
                   <div className="flex flex-col items-center gap-3 text-center">
                     <p className="text-xs uppercase tracking-[0.3em] text-white/50 font-light">
@@ -148,13 +146,14 @@ const About: React.FC = () => {
                   </div>
 
                   {sponsor.layout === 'row' ? (
-                    <div className="flex flex-row items-center justify-center gap-6 flex-wrap mt-4">
+                    <div className="flex flex-row items-center justify-center gap-4 md:gap-6 flex-wrap mt-4">
                       {Array.from({ length: sponsor.count }).map((_, j) => (
                         <LogoSquare key={j} />
                       ))}
                     </div>
                   ) : (
-                    <div className="grid grid-cols-4 gap-4 mt-4">
+                    /* Fixed: grid-cols-2 for mobile, grid-cols-4 for desktop */
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 overflow-y-auto md:overflow-visible max-h-[40vh] md:max-h-none">
                       {Array.from({ length: sponsor.count }).map((_, j) => (
                         <LogoSquare key={j} />
                       ))}
@@ -174,10 +173,6 @@ const About: React.FC = () => {
             </section>
           ))}
         </div>
-      </div>
-
-      <div className="h-[25vh] w-full">
-        <TapeTransition />
       </div>
     </>
   )
