@@ -8,14 +8,14 @@ import WhySection from "./sections/whySection/WhySection"
 export const HomeRoute = () => {
 	return (
 		<div className="w-full min-h-screen bg-[#131313]">
-		<Dashboard /> 
-		<WhySection/>
-		<Events/>
-		<div className="h-[30vh]"/>
-		<About/>
-		<MeetOurTeam/>
-		<Footer />
-		
+			<Dashboard />
+			<WhySection />
+			<Events />
+			<div className="h-[10vh] md:h-[30vh]" />
+			<About />
+			<MeetOurTeam />
+			<Footer />
+
 		</div>
 	)
 }
