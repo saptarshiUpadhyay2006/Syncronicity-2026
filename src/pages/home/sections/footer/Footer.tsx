@@ -4,7 +4,7 @@ import insta from '../../../../assets/footer/insta-icon.svg';
 import face from '../../../../assets/footer/facebook-icon.svg';
 import github from '../../../../assets/footer/github-icon.svg';
 import linkedin from '../../../../assets/footer/linkedin-icon.svg';
-import call from '../../../../assets/footer/call-icon.svg';
+// import call from '../../../../assets/footer/call-icon.svg';
 import mail from '../../../../assets/footer/mail-icon.svg';
 import robot from '../../../../assets/footer/robot.png';
 
@@ -12,9 +12,9 @@ import robot from '../../../../assets/footer/robot.png';
 import SendMessageCard from '../../../../../components/Form';
 import { MapPin, Phone, Mail as MailIcon } from "lucide-react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const links = ["About", "Events", "Our Team", "Subscriptions", "Contact Us", "FAQs"];
-  
+
   // Mapping for clean iteration over social imports
   const socialIcons = [
     { src: mail, alt: "Email" },
@@ -37,7 +37,7 @@ const Footer = () => {
           <p className="text-gray-700 leading-relaxed max-w-sm">
             Have questions about membership, events, or collaborations? Reach out to the Jadavpur University ACM Student Chapter and we'll get back to you.
           </p>
-          
+
           <div className="space-y-4 text-black">
             <div className="flex items-start gap-4">
               <MapPin className="w-6 h-6 shrink-0" />
@@ -65,10 +65,10 @@ const Footer = () => {
           </p>
           <div className="flex justify-center md:justify-start gap-3">
             {socialIcons.map((social, index) => (
-              <img 
-                key={index} 
-                src={social.src} 
-                alt={social.alt} 
+              <img
+                key={index}
+                src={social.src}
+                alt={social.alt}
                 className="w-6 h-6 cursor-pointer hover:opacity-75 transition-opacity"
               />
             ))}

@@ -3,12 +3,11 @@
 import React, { useEffect, useRef } from 'react'
 import Cityscape from './Cityscape'
 import '../../../../index.css'
-import infinity from '../../../../assets/about/infinity-icon.svg'
-import bulb from '../../../../assets/about/bulb-icon.svg'
+
 // import TapeTransition from '../../../../../components/TapeTransition'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import ImageTrail from './ImageTrail'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -27,12 +26,7 @@ const About: React.FC = () => {
     useRef<HTMLElement | null>(null),
   ]
 
-  const images = [
-    'https://images.unsplash.com/photo-1543270122-869908274728?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://plus.unsplash.com/premium_photo-1733892954383-02cb3adf0709?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1727434032792-c7ef921ae086?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1531686264889-56fdcabd163f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  ]
+
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -118,9 +112,6 @@ const About: React.FC = () => {
   return (
     <>
       <div className="relative w-full min-h-[150vh] bg-[#131313]">
-        <div className="absolute top-0 h-full w-full z-[1] pointer-events-auto">
-          <ImageTrail items={images} />
-        </div>
         <Cityscape />
 
         <div
@@ -161,14 +152,7 @@ const About: React.FC = () => {
                   )}
                 </div>
 
-                <div className="text-section h-[15%] w-[30%] flex-col items-center justify-center text-center hidden md:flex">
-                  <img className="h-[50%]" src={infinity} alt="infinity" />
-                  <div className="h-[50%] w-[80%] flex items-center justify-center gap-2 whitespace-nowrap">
-                    <img className="h-[50%]" src={bulb} alt="bulb" />
-                    <p className="text-sm font-bold text-white">Pro tip</p>
-                    <p className="text-sm font-light text-white">Move your mouse</p>
-                  </div>
-                </div>
+
               </div>
             </section>
           ))}

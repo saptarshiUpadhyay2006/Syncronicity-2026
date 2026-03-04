@@ -4,6 +4,7 @@ import Events from "./sections/events/Events";
 import FAQ from "./sections/faq/FAQ";
 import Footer from "./sections/footer/Footer";
 import Stats from "./sections/stats/Stats";
+import ProblemStatement from './sections/problemStatement/ProblemStatement'
 import Timeline from "./sections/timeline/Timeline";
 import TimelineMobile from "./sections/timeline/TimelineMobile";
 import WhySection from "./sections/whySection/WhySection";
@@ -13,6 +14,7 @@ export const HomeRoute = () => {
     <div className="w-full min-h-screen bg-[#131313]">
       <Dashboard />
       <WhySection />
+      <ProblemStatement />
       <Stats />
 
       <Events />
