@@ -9,22 +9,26 @@ const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
 const FAQ_DATA = [
     {
-        question: "What is the event all about?",
-        answer: "Our summit is an all-in-one platform designed to simplify tech exploration, automate networking, and track the latest industry trends in real-time for innovators of all backgrounds."
+        question: "When should I arrive at the venue?",
+        answer: "Participants should arrive at least 30–60 minutes before the opening ceremony to complete check-in, collect badges, and settle down before the event kickoff."
     },
     {
-        question: "How do I participate in the Hackathon?",
-        answer: "Simply register through our portal, form a team of 2-4 members, and prepare to build something extraordinary over 48 hours of pure creation."
+        question: "Will mentors be available during the hackathon?",
+        answer: "Yes. Mentors will be available during scheduled mentoring slots and roaming sessions to help teams with technical challenges, product ideas, and overall guidance."
     },
     {
-        question: "Is the venue accessible and secure?",
-        answer: "Yes, we prioritize safety and inclusivity. The venue is fully accessible, and our security team ensures a safe environment for all attendees 24/7."
+        question: "Will food and refreshments be provided?",
+        answer: "Yes. Meals, snacks, and beverages will be provided at scheduled intervals throughout the 24-hour hackathon to keep participants energized."
     },
     {
-        question: "Can I integrate my projects with other platforms?",
-        answer: "Absolutely! We provide open APIs and dedicated support to help you integrate your hacks with common industry accounting and management software."
+        question: "How do we submit our project?",
+        answer: "Projects must be submitted before the official submission deadline through the designated submission platform, usually including a GitHub repository and a short project description."
+    },
+    {
+        question: "What happens when the 24 hours end?",
+        answer: "Once the timer ends, all coding must stop. Teams then move into the submission phase and prepare demos for the judging rounds."
     }
-]
+];
 
 // ─── Variants ──────────────────────────────────────────────────────────────────
 
@@ -171,7 +175,7 @@ const FAQ: React.FC = () => {
                             variants={fadeUp}
                         >
                             Frequently <br />
-                            <span className="bg-gradient-to-r from-[#70D2FF] to-white bg-clip-text text-transparent">
+                            <span className="bg-linear-to-r from-[#70D2FF] to-white bg-clip-text text-transparent">
                                 asked questions
                             </span>
                         </motion.h2>
