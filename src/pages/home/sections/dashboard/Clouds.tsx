@@ -18,24 +18,24 @@ function Clouds(): React.JSX.Element {
   //       {/*middle layer */}
   //       <div className='mid-right w-[60%] h-[48%]   absolute z-20 top-[20%] right-[-10%] bg-center bg-no-repeat bg-cover ' style={{backgroundImage: `url(${cloudMidRight})`}}/>
   //       <div className='mid-left w-[60%] h-[48%]   absolute z-20 top-[25%] left-[-10%] bg-center bg-no-repeat bg-cover ' style={{backgroundImage: `url(${cloudMidLeft})`}}/>
-        
+
   //       <div className='mid-mid w-[60%] h-[48%]   absolute z-15 top-[25%] left-[50%] -translate-x-2/3 bg-center bg-no-repeat bg-cover ' style={{backgroundImage: `url(${cloudMidMiddle})`}}/>
   //       {/*fornt layer */}
   //       <div className='font-mid w-[60%] h-[48%]    absolute z-15 top-[55%] left-[50%] translate-x-[-20%] bg-center bg-no-repeat bg-cover ' style={{backgroundImage: `url(${cloudFront1})`}}/>
-        
+
   //   </div>
   // )
-  return(
-    <div className=' relative min-h-[80vh] w-full overflow-x-hidden overflow-y-hidden mt-[10%] md:mt-0  '>
-      <img src={cloudBackLeft} className='w-[50%] absolute left-[-10%] top-[5%] z-5'/>
-      <img src={cloudBackMiddle} className=' w-[60%] absolute left-[50%] top-[7%] transform translate-x-[-50%] z-5 '/>
-      <img src={cloudBackRight} className='w-[50%] absolute right-[-10%] top-[2%] z-5 '/>
+  return (
+    <div className=' relative min-h-[80vh] w-full overflow-x-hidden overflow-y-hidden mt-[10%] md:mt-0 bg-linear-to-b from-[#BFDCE6] to-[#A4CFDF] '>
+      <img src={cloudBackLeft} className='w-[50%] absolute left-[-10%] top-[5%] z-5' />
+      <img src={cloudBackMiddle} className=' w-[60%] absolute left-[50%] top-[7%] transform translate-x-[-50%] z-5 ' />
+      <img src={cloudBackRight} className='w-[50%] absolute right-[-10%] top-[2%] z-5 ' />
 
-      <img src={cloudMidLeft} className='w-[50%] absolute left-[-10%] top-[7%] z-10'/>
-      <img src={cloudMidRight} className='w-[50%] absolute right-[-10%] top-[15%] z-10 '/>
-      <img src={cloudMidMiddle} className=' w-[60%] absolute left-[50%] top-[12%] transform translate-x-[-50%] z-10'/>
+      <img src={cloudMidLeft} className='w-[50%] absolute left-[-10%] top-[7%] z-10' />
+      <img src={cloudMidRight} className='w-[50%] absolute right-[-10%] top-[15%] z-10 ' />
+      <img src={cloudMidMiddle} className=' w-[60%] absolute left-[50%] top-[12%] transform translate-x-[-50%] z-10' />
 
-      <img src={cloudFront1} className=' w-[60%] absolute left-[60%] top-[30%] transform translate-x-[-50%] z-20'/>
+      <img src={cloudFront1} className=' w-[60%] absolute left-[60%] top-[30%] transform translate-x-[-50%] z-20' />
     </div>
   )
 }

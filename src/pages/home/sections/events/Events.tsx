@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import herobg from '../../../../assets/dashboard/hero-bg.png'
+// import herobg from '../../../../assets/dashboard/hero-bg.png'
 import mascotImg from '../../../../assets/events/events_mascot.png'
 
 const EVENTS = [
@@ -298,7 +298,7 @@ const Events: React.FC = () => {
   }, [filtered.length])
 
   return (
-    <div className="min-h-screen" style={{ backgroundImage: `url(${herobg})` }}>
+    <div className="min-h-screen" >
       {/* MOBILE LAYOUT */}
       <div className="md:hidden flex flex-col min-h-screen bg-no-repeat bg-center bg-cover relative overflow-hidden">
         <div
@@ -328,9 +328,9 @@ const Events: React.FC = () => {
             }}
           >
             <span className="text-white">EXCITING </span>
-            <span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>EVENTS</span>
+            <span style={{ color: '#10a0cc' }}>EVENTS</span>
             <br />
-            <span style={{ color: '#10a0cc' }}>AWAIT !!</span>
+            <span className='text-white'>AWAIT !!</span>
           </h1>
           <div
             className="h-px mt-5"
@@ -422,9 +422,9 @@ const Events: React.FC = () => {
               }}
             >
               <span className="text-white">EXCITING </span>
-              <span style={{ WebkitTextStroke: '1.5px #fff', color: 'transparent' }}>EVENTS</span>
+              <span style={{ color: '#10a0cc' }}>EVENTS</span>
               <br />
-              <span className="text-[#10a0cc]">AWAIT !!</span>
+              <span className="text-white">AWAIT !!</span>
             </h1>
           </div>
           <div className="h-px" style={{ background: 'linear-gradient(90deg, #10a0cc55, transparent)' }} />

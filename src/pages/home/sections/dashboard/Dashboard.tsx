@@ -6,7 +6,6 @@ import ListofLinks from "./ListofLinks";
 import Description from "./Description";
 import { EventCard } from "./EventCard";
 import Navbar from "../../../../../components/Navbar";
-import Clouds from "./Clouds";
 
 export const Dashboard: React.FC = () => {
   return (
@@ -64,7 +63,6 @@ export const Dashboard: React.FC = () => {
           tiltDirection="right"
         />
       </section>
-      <Clouds />
     </div>
   );
 };
