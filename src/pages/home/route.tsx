@@ -76,7 +76,7 @@ export const HomeRoute = () => {
         wheelMultiplier: 1.5,
       }}
     >
-      <div className="w-full min-h-screen bg-[#131313] overflow-hidden">
+      <div className="w-full min-h-screen bg-[#B2D9E7] overflow-hidden">
         <div className="relative min-h-screen w-full">
           <Dashboard />
           <Clouds />
@@ -101,7 +101,9 @@ export const HomeRoute = () => {
           <TimelineMobile />
         </div>
 
-        <FAQ />
+        <div className="bg-[#131313]">
+          <FAQ />
+        </div>
         <Footer />
       </div>
     </ReactLenis>
