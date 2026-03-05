@@ -12,23 +12,49 @@ import WhySection from "./sections/whySection/WhySection";
 export const HomeRoute = () => {
   return (
     <div className="w-full min-h-screen bg-[#131313]">
-      <Dashboard />
-      <WhySection />
-      <ProblemStatement />
-      <Stats />
 
-      <Events />
+      <section id="home">
+        <Dashboard />
+      </section>
+
+      <section id="why">
+        <WhySection />
+      </section>
+
+      <section id="problem">
+        <ProblemStatement />
+      </section>
+
+      <section id="stats">
+        <Stats />
+      </section>
+
+      <section id="events">
+        <Events />
+      </section>
+
       <div className="h-[30vh]" />
-      <About />
-      <div className="hidden md:block">
-        <Timeline />
-      </div>
 
-      <div className="block md:hidden lg:hidden">
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="timeline" className="hidden md:block">
+        <Timeline />
+      </section>
+
+      <section id="timeline-mobile" className="block md:hidden lg:hidden">
         <TimelineMobile />
-      </div>
-      <FAQ />
-      <Footer />
+      </section>
+
+      <section id="faq">
+        <FAQ />
+      </section>
+
+      <section id="contact">
+        <Footer />
+      </section>
+
     </div>
   );
 };
