@@ -3,7 +3,7 @@ import React from "react";
 const SendMessageCard: React.FC = () => {
   return (
     <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6">
-      
+
       <h2 className="text-2xl font-bold text-sky-400 mb-6">
         Send a message
       </h2>
@@ -14,7 +14,7 @@ const SendMessageCard: React.FC = () => {
           <input
             type="text"
             placeholder="Name"
-            className="mt-1 w-full rounded-full text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sky-400"
+            className="mt-1 w-full rounded-full text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm outline-none "
           />
         </div>
 
@@ -23,7 +23,7 @@ const SendMessageCard: React.FC = () => {
           <input
             type="tel"
             placeholder="Phone"
-            className="mt-1 w-full rounded-full text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sky-400"
+            className="mt-1 w-full rounded-full text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm outline-none"
           />
         </div>
 
@@ -32,7 +32,7 @@ const SendMessageCard: React.FC = () => {
           <input
             type="email"
             placeholder="Email ID"
-            className="mt-1 w-full rounded-full text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sky-400"
+            className="mt-1 w-full rounded-full text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm outline-none "
           />
         </div>
 
@@ -41,7 +41,7 @@ const SendMessageCard: React.FC = () => {
           <textarea
             placeholder="Enter your message"
             rows={4}
-            className="mt-1 w-full rounded-xl text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm resize-none outline-none focus:ring-2 focus:ring-sky-400"
+            className="mt-1 w-full rounded-xl text-gray-600 placeholder:text-gray-600 bg-gray-200 px-4 py-2 text-sm resize-none outline-none "
           />
         </div>
 
