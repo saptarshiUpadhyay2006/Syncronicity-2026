@@ -20,41 +20,34 @@ const SendMessageCard: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("");
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setLoading(true);
+  setStatus("");
 
-    try {
-      const res = await fetch(
-  "https://script.google.com/macros/s/AKfycbw8BbHV289Pv0aE-eeJDSohNmX9jZyQ9g9xv4_v9NpgfXv28qL_BXRV410VJU_pkMWQ/exec",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-    mode: "cors",
-  }
-);
-
-      if (res.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        setStatus("Failed to send message.");
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbw8BbHV289Pv0aE-eeJDSohNmX9jZyQ9g9xv4_v9NpgfXv28qL_BXRV410VJU_pkMWQ/exec",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain", // ← change this too
+        },
+        body: JSON.stringify(formData),
+        mode: "no-cors", // ← key change
       }
-    } catch (error) {
-      setStatus("Error sending message.");
-    }
+    );
 
-    setLoading(false);
-  };
+    // With no-cors we can't check res.ok, so assume success if no error thrown
+    setStatus("Message sent successfully!");
+    setFormData({ name: "", phone: "", email: "", message: "" });
+
+  } catch (error) {
+    setStatus("Error sending message.");
+  }
+
+  setLoading(false);
+};
 
   return (
     <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6">
