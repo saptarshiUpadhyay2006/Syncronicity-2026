@@ -23,7 +23,7 @@ export const HomeRoute = () => {
     requestAnimationFrame(() => {
       lenis?.scrollTo(0, { immediate: true });
     });
-  }, [pathname]);
+  }, [pathname, lenis]);
 
   useEffect(() => {
     if (!lenis) return;
@@ -68,7 +68,7 @@ export const HomeRoute = () => {
     <ReactLenis
       root
       options={{
-        easing: (t) => 1 - Math.pow(1 - t, 3),
+        easing: (t: number) => 1 - Math.pow(1 - t, 3),
         duration: 1.2,
         smoothWheel: true,
         syncTouch: false,
@@ -91,7 +91,7 @@ export const HomeRoute = () => {
           <div className="h-[30vh]" />
         </div>
 
-        <SponsorsComingSoon />
+
 
         <div className="hidden md:block">
           <Timeline />
@@ -100,7 +100,7 @@ export const HomeRoute = () => {
         <div className="block md:hidden lg:hidden">
           <TimelineMobile />
         </div>
-
+        <SponsorsComingSoon />
         <div className="bg-[#131313]">
           <FAQ />
         </div>
